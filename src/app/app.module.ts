@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TitleComponent } from './components/title/title.component';
 import { FoodListComponent } from './components/food-list/food-list.component';
 import { CardComponent } from './components/card/card.component';
+import { FloatingIconsComponent } from './components/floating-icons/floating-icons.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CardComponent } from './components/card/card.component';
     HomeComponent,
     TitleComponent,
     FoodListComponent,
-    CardComponent
+    CardComponent,
+    FloatingIconsComponent
   ],
   imports: [
     BrowserModule,
