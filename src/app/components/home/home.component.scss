@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+.container-comidas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 5%;    
+}
+
+.link{    
+    text-decoration: none;
+    
+    img{
+        width: 250px;
+        height: 250px;
+        transition: transform .5s;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
+    
+    .comidas-title{
+        font-family: 'Lobster', 'Open Sasn', Arial;
+        text-align: center;
+        font-size: 2.625em;
+        color: black;
+        margin-top: 15px;
+    }
+}

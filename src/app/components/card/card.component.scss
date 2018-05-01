@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+.card{
+    width: 250px;
+    height: 450px;
+    border: solid 1px #95989A;
+}
+
+.top{
+    width: 100%;
+    height: 25px;
+    background-color: #C50032;
+}
+
+.header{
+    width: 100%;
+    height: 55px;
+    background-color: #FF4C5B;
+    padding: 15px;
+
+    .food-name{
+        color: black;
+        font-size: 1.25em;
+        font-family: 'Roboto', 'Open Sans', Arial;
+        font-weight: bold;
+    }
+}
+
+.food-img{
+    width: 100%;
+    height: 185px;
+    border-bottom: solid 1px #95989A;
+}
+
+.food-info{
+    width: 100%;
+    height: 185px;
+}
+
