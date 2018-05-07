@@ -9,6 +9,7 @@ const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'food-list', component: FoodListComponent},
+    {path: 'food-list/:food-type', component: FoodListComponent},
 ]
 
 export const appRoutingProviders: any[] = [];

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-food-list',
@@ -6,8 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-list.component.scss']
 })
 export class FoodListComponent implements OnInit {
+  public foodListType: string;
+  title: string;
 
-  constructor() { }
+  constructor( private activatedRoute: ActivatedRoute ) { 
+    this.foodListType = this.activatedRoute.snapshot.params['food-type'];
+    
+    switch(this.foodListType){
+      case 'breakfast':
+        this.title = 'Desayuno';      
+      break;
+      case 'branch':
+        this.title = 'Almuerzo';      
+      break;
+      case 'lunch':
+        this.title = 'Comida';      
+      break;
+      case 'afternoon-snack':
+        this.title = 'Merienda';      
+      break;
+      case 'dinner':
+        this.title = 'Cena';      
+      break;
+    }
+  }
 
   ngOnInit() {
   }
