@@ -1,10 +1,32 @@
-
-<div class="card">
-  <div class="top"></div>
-  <div class="header">
-    <p class="food-name">Text</p>
+<div class="container-cards">
+  <div *ngFor="let person of people" class="card" [ngClass]="{'breakfast':foodListType === 'breakfast',
+                                                              'branch':foodListType === 'branch',
+                                                              'lunch':foodListType === 'lunch',
+                                                              'afternoon-snack':foodListType === 'afternoon-snack',
+                                                              'dinner':foodListType === 'dinner'}">
+    <div class="top"></div>
+    <div class="header">
+      <p class="food-name">{{person.name}}</p>
+    </div>
+    <div class="food-img">
+      <img src="{{person.image}}" alt="">
+    </div>
+    <div class="food-info">
+      <ul class="list-info">
+        <li class="macronutrients"> 
+          <b>Kcal: </b> {{person.info.kcal}}
+        </li>
+        <li class="macronutrients">
+          <b>Grasas: </b> {{person.info.fat}}
+        </li>
+        <li class="macronutrients">
+          <b>Carbohidratos: </b> {{person.info.carbohydrates}}
+        </li>
+        <li class="macronutrients">
+          <b>Proteinas: </b> {{person.info.proteins}}
+        </li>
+      </ul>
+    </div>
   </div>
-  <div class="food-img"></div>
-  <div class="food-info"></div>
 </div>
 <app-floating-icons></app-floating-icons>

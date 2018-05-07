@@ -1,39 +1,135 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100');
 
+.container-cards{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
 .card{
     width: 250px;
     height: 450px;
     border: solid 1px #95989A;
-}
+    
+    .top{
+        width: 100%;
+        height: 25px;
+    }
 
-.top{
-    width: 100%;
-    height: 25px;
-    background-color: #C50032;
-}
+    .header{
+        width: 100%;
+        height: 55px;
+        padding: 15px;
 
-.header{
-    width: 100%;
-    height: 55px;
-    background-color: #FF4C5B;
-    padding: 15px;
+        .food-name{
+            font-size: 1.25em;
+            font-family: 'Roboto', 'Open Sans', Arial;
+            font-weight: bold;
+        }
+    }
+    
+    .food-img{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 185px;
+        border-bottom: solid 1px #95989A;
+        padding: 15px;
 
-    .food-name{
-        color: black;
-        font-size: 1.25em;
-        font-family: 'Roboto', 'Open Sans', Arial;
-        font-weight: bold;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .food-info{
+        width: 100%;
+        height: 185px;
+        padding: 15px;
+
+        .list-info{
+            font-size: 1.25em;
+            font-family: 'Roboto:400', 'Open Sans', Arial;
+            list-style: none;
+
+            .macronutrients{
+                padding: 2.5px 0;
+            }
+        }
     }
 }
 
-.food-img{
-    width: 100%;
-    height: 185px;
-    border-bottom: solid 1px #95989A;
+.breakfast{
+    .top{    
+        background-color: #C50032;
+    }
+    
+    .header{
+        background-color: #FF4C5B;
+
+        .food-name{
+            color: black;
+        }            
+    }
 }
 
-.food-info{
-    width: 100%;
-    height: 185px;
+
+.branch{
+    .top{    
+        background-color: #331E0E;
+    }
+    
+    .header{
+        background-color: #5E4534;
+        
+        .food-name{
+            color: white;
+        }        
+    }
 }
+
+.lunch{
+    .top{    
+        background-color: #BF3D27;
+    }
+    
+    .header{
+        background-color: #F86E51;
+        
+        .food-name{
+            color: black;
+        }        
+    }
+}
+
+.afternoon-snack{
+    .top{    
+        background-color: #C9AF4B;
+    }
+    
+    .header{
+        background-color: #FEE17A;
+        
+        .food-name{
+            color: black;
+        }        
+    }
+}
+
+.dinner{
+    .top{    
+        background-color: #0064CB;
+    }
+    
+    .header{
+        background-color: #0091FF;
+        
+        .food-name{
+            color: white;
+        }        
+    }
+}
+
+
+
 

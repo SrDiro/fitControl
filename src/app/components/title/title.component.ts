@@ -8,13 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TitleComponent implements OnInit {
   @Input() public title: string;
 
-  constructor() {    
+  constructor() {
+    this.title = 'Comidas del día';
   }
 
   ngOnInit() {    
-  }
-
-  public setTitle(value){
-    this.title = value;
   }
 }

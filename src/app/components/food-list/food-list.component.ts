@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FoodListComponent implements OnInit {
   public foodListType: string;
-  title: string;
+  public title: string;
 
   constructor( private activatedRoute: ActivatedRoute ) { 
     this.foodListType = this.activatedRoute.snapshot.params['food-type'];
@@ -29,7 +29,7 @@ export class FoodListComponent implements OnInit {
       case 'dinner':
         this.title = 'Cena';      
       break;
-    }
+    }    
   }
 
   ngOnInit() {
