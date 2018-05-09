@@ -1,29 +1,33 @@
 <div class="container-cards">
-  <div *ngFor="let person of people" class="card" [ngClass]="{'breakfast':foodListType === 'breakfast',
-                                                              'branch':foodListType === 'branch',
-                                                              'lunch':foodListType === 'lunch',
-                                                              'afternoon-snack':foodListType === 'afternoon-snack',
-                                                              'dinner':foodListType === 'dinner'}">
+
+  <div *ngFor="let dato of pruebaObject" class="card" [ngClass]="
+  {
+    'breakfast':foodListType === 'breakfast',
+    'branch':foodListType === 'branch',
+    'lunch':foodListType === 'lunch',
+    'afternoon-snack':foodListType === 'afternoon-snack',
+    'dinner':foodListType === 'dinner'
+  }">
     <div class="top"></div>
     <div class="header">
-      <p class="food-name">{{person.name}}</p>
+      <p class="food-name">{{dato}}</p>
     </div>
     <div class="food-img">
-      <img src="{{person.image}}" alt="">
+      <img draggable="false" src="{{dato.imagen}}" alt="">
     </div>
     <div class="food-info">
       <ul class="list-info">
         <li class="macronutrients"> 
-          <b>Kcal: </b> {{person.info.kcal}}
+          <b>Kcal: </b>{{dato.info.kcal}}
         </li>
         <li class="macronutrients">
-          <b>Grasas: </b> {{person.info.fat}}
+          <b>Grasas: </b> {{dato.info.fat}}
         </li>
         <li class="macronutrients">
-          <b>Carbohidratos: </b> {{person.info.carbohydrates}}
+          <b>Carbohidratos: </b> {{dato.info.carbohydrates}}
         </li>
         <li class="macronutrients">
-          <b>Proteinas: </b> {{person.info.proteins}}
+          <b>Proteinas: </b> {{dato.info.proteins}}
         </li>
       </ul>
     </div>

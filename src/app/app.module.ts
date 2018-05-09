@@ -10,6 +10,7 @@ import { TitleComponent } from './components/title/title.component';
 import { FoodListComponent } from './components/food-list/food-list.component';
 import { CardComponent } from './components/card/card.component';
 import { FloatingIconsComponent } from './components/floating-icons/floating-icons.component';
+import { DietListComponent } from './components/diet-list/diet-list.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FloatingIconsComponent } from './components/floating-icons/floating-ico
     TitleComponent,
     FoodListComponent,
     CardComponent,
-    FloatingIconsComponent
+    FloatingIconsComponent,
+    DietListComponent
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@ export class FoodListComponent implements OnInit {
   public foodListType: string;
   public title: string;
 
-  constructor( private activatedRoute: ActivatedRoute ) { 
+  constructor( private activatedRoute: ActivatedRoute ) {
     this.foodListType = this.activatedRoute.snapshot.params['food-type'];
     
     switch(this.foodListType){

@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100');
 
+img{
+    user-select: none;
+}
+
 .container-cards{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     align-content: center;
 }
 
@@ -10,6 +15,7 @@
     width: 250px;
     height: 450px;
     border: solid 1px #95989A;
+    margin: 0 50px;
     
     .top{
         width: 100%;
