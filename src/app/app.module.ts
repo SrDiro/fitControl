@@ -12,6 +12,10 @@ import { CardComponent } from './components/card/card.component';
 import { FloatingIconsComponent } from './components/floating-icons/floating-icons.component';
 import { DietListComponent } from './components/diet-list/diet-list.component';
 
+// Dependencias de firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { DietListComponent } from './components/diet-list/diet-list.component';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [
     appRoutingProviders
