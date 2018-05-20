@@ -32,6 +32,10 @@ export class FoodListComponent implements OnInit {
     }    
   }
 
+  getTitle(){    
+    return this.title;
+  }
+
   ngOnInit() {
   }
 

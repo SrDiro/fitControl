@@ -1,6 +1,6 @@
 <div class="container-cards">
 
-  <div *ngFor="let dato of pruebaObject" class="card" [ngClass]="
+  <div *ngFor="let food of foodItem" class="card" [ngClass]="
   {
     'breakfast':foodListType === 'breakfast',
     'branch':foodListType === 'branch',
@@ -10,24 +10,24 @@
   }">
     <div class="top"></div>
     <div class="header">
-      <p class="food-name">{{dato}}</p>
+      <p class="food-name">{{food.$key}}</p>
     </div>
     <div class="food-img">
-      <img draggable="false" src="{{dato.imagen}}" alt="">
+      <img draggable="false" src="{{food.imagen}}" alt="">
     </div>
     <div class="food-info">
       <ul class="list-info">
         <li class="macronutrients"> 
-          <b>Kcal: </b>{{dato.info.kcal}}
+          <b>Kcal: </b>{{food.info.kcal}}
         </li>
         <li class="macronutrients">
-          <b>Grasas: </b> {{dato.info.fat}}
+          <b>Grasas: </b> {{food.info.fat}}
         </li>
         <li class="macronutrients">
-          <b>Carbohidratos: </b> {{dato.info.carbohydrates}}
+          <b>Carbohidratos: </b> {{food.info.carbohydrates}}
         </li>
         <li class="macronutrients">
-          <b>Proteinas: </b> {{dato.info.proteins}}
+          <b>Proteinas: </b> {{food.info.proteins}}
         </li>
       </ul>
     </div>

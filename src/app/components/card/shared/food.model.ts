@@ -1,5 +1,5 @@
 export class Food {
-    name : {
+    $key : {
         image : string,
         info : {
             carbohydrates : string,
@@ -8,4 +8,5 @@ export class Food {
             proteins : string
         }
     }
+      
 }

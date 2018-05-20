@@ -16,6 +16,7 @@ import { DietListComponent } from './components/diet-list/diet-list.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { FoodAddComponent } from './components/food-add/food-add.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { environment } from '../environments/environment';
     FoodListComponent,
     CardComponent,
     FloatingIconsComponent,
-    DietListComponent
+    DietListComponent,
+    FoodAddComponent
   ],
   imports: [
     BrowserModule,

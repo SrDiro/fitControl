@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { FoodListComponent } from './components/food-list/food-list.component';
+import { FoodAddComponent } from './components/food-add/food-add.component';
 import { DietListComponent } from './components/diet-list/diet-list.component';
 
 const appRoutes: Routes = [
@@ -11,6 +12,7 @@ const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'food-list', component: FoodListComponent},
     {path: 'food-list/:food-type', component: FoodListComponent},
+    {path: 'food-add', component: FoodAddComponent},
     {path: 'diet-list', component: DietListComponent},
 ]
 
