@@ -2,8 +2,8 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
-import { FoodListComponent } from './components/food-list/food-list.component';
-import { FoodAddComponent } from './components/food-add/food-add.component';
+import { FoodListComponent } from './components/food/food-list/food-list.component';
+import { FoodAddComponent } from './components/food/food-add/food-add.component';
 import { DietListComponent } from './components/diet-list/diet-list.component';
 
 const appRoutes: Routes = [

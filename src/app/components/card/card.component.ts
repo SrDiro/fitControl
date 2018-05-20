@@ -1,6 +1,6 @@
 import { Component, OnInit, Pipe } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FoodListComponent } from '../food-list/food-list.component';
+import { FoodListComponent } from '../food/food-list/food-list.component';
 
 // Inyectar food.service
 import { FoodService } from './shared/food.service';

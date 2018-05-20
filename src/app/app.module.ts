@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { TitleComponent } from './components/title/title.component';
-import { FoodListComponent } from './components/food-list/food-list.component';
+import { FoodListComponent } from './components/food/food-list/food-list.component';
 import { CardComponent } from './components/card/card.component';
 import { FloatingIconsComponent } from './components/floating-icons/floating-icons.component';
 import { DietListComponent } from './components/diet-list/diet-list.component';
@@ -16,7 +16,7 @@ import { DietListComponent } from './components/diet-list/diet-list.component';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
-import { FoodAddComponent } from './components/food-add/food-add.component';
+import { FoodAddComponent } from './components/food/food-add/food-add.component';
 
 @NgModule({
   declarations: [
