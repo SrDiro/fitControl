@@ -14,15 +14,19 @@ export class FoodService {
     return this.foodList;
   }
  
-  // insertFood(employee : Food)
-  // {
-  //   this.foodList.push({
-  //     name: employee.name,
-  //     position: employee.position,
-  //     office: employee.office,
-  //     salary: employee.salary
-  //   });
-  // }
+  insertFood(food : Food)
+  {
+    this.foodList = this.firebase.list('Comida');
+    console.log(this.foodList);
+    this.foodList.push({
+      $key: food.$key,
+      imagen: food.$key.image,
+      kcal: food.$key.info.kcal,
+      fat: food.$key.info.fat,
+      carbohydrates: food.$key.info.carbohydrates,
+      proteins: food.$key.info.proteins,
+    });
+  }
  
   // updateFood(employee : Food){
   //   this.foodList.update(employee.$key,

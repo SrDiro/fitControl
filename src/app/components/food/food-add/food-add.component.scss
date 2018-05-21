@@ -67,3 +67,17 @@ input{
     border-style: none;
     background-color: transparent;
 }
+
+.submit-button{
+    background-color: #00c853;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    width: 248px;
+    height: 30px;
+    top: 80%;
+    color: black;
+    cursor: pointer;
+    border: solid 1px #95989A;
+}

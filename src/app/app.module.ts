@@ -11,6 +11,7 @@ import { FoodListComponent } from './components/food/food-list/food-list.compone
 import { CardComponent } from './components/card/card.component';
 import { FloatingIconsComponent } from './components/floating-icons/floating-icons.component';
 import { DietListComponent } from './components/diet-list/diet-list.component';
+import { FormsModule }   from '@angular/forms';
 
 // Dependencias de firebase
 import { AngularFireModule } from 'angularfire2';
@@ -34,7 +35,8 @@ import { FoodAddComponent } from './components/food/food-add/food-add.component'
     BrowserModule,
     routing,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   providers: [
     appRoutingProviders

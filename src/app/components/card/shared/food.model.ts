@@ -1,12 +1,8 @@
+import { Info } from './info.model';
+
 export class Food {
     $key : {
         image : string,
-        info : {
-            carbohydrates : string,
-            fat : string,
-            kcalc : string,
-            proteins : string
-        }
-    }
-      
+        info : Info
+    }      
 }
