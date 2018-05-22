@@ -1,0 +1,84 @@
+.container-card{
+    margin: 0 calc(5% - 50px);
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 250px;
+    min-height: 450px;
+    border: solid 1px #95989A;
+    margin: 175px 50px;
+    
+    .top{
+        width: 100%;
+        height: 25px;
+        background-color: #009624;
+    }
+
+    .header{
+        width: 100%;
+        height: 55px;
+        padding: 15px;
+        background-color: #00c853;
+
+        .food-name{
+            font-size: 1.25em;
+            font-family: 'Roboto', 'Open Sans', Arial;
+            font-weight: bold;
+            color: black;
+        }
+    }
+    
+    .food-img{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 185px;
+        border-bottom: solid 1px #95989A;
+        padding: 15px;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .food-info{
+        width: 100%;
+        min-height: 185px;
+        padding: 15px;
+
+        input{
+            margin: 10px 0;
+        }
+    }
+}
+
+.icon-diet{
+    display: none !important;
+}
+
+
+input{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 1.1em;
+    border-style: none;
+    background-color: transparent;
+}
+
+
+.submit-button{
+    background-color: #00c853;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    width: 248px;
+    height: 30px;
+    top: 80%;
+    color: black;
+    cursor: pointer;
+    border: solid 1px #95989A;
+}

@@ -18,6 +18,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { FoodAddComponent } from './components/food/food-add/food-add.component';
+import { FoodEditComponent } from './components/food/food-edit/food-edit.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FoodAddComponent } from './components/food/food-add/food-add.component'
     CardComponent,
     FloatingIconsComponent,
     DietListComponent,
-    FoodAddComponent
+    FoodAddComponent,
+    FoodEditComponent
   ],
   imports: [
     BrowserModule,

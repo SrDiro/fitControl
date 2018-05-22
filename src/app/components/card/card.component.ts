@@ -1,5 +1,5 @@
 import { Component, OnInit, Pipe } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FoodListComponent } from '../food/food-list/food-list.component';
 
 // Inyectar food.service
@@ -18,7 +18,7 @@ export class CardComponent implements OnInit{
   public foodListType: string;
   foodItem: Food[];
 
-  constructor( private activatedRoute: ActivatedRoute, private foodService : FoodService, private foodListComponent : FoodListComponent ) { 
+  constructor( private activatedRoute: ActivatedRoute, private foodService : FoodService, private foodListComponent : FoodListComponent, private router: Router ) { 
     this.foodListType = this.activatedRoute.snapshot.params['food-type'];
   }
 
@@ -39,6 +39,10 @@ export class CardComponent implements OnInit{
     if (confirm('Are you sure to delete this record ?') == true) {
       this.foodService.deleteFood(keyFood);
     }
+  }
+
+  editFood(key: string){
+    this.router.navigate(['/food-edit'])
   }
 
 }

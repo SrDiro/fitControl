@@ -1,0 +1,19 @@
+<form #foodForm="ngForm" (ngSubmit)="onSubmit(foodForm)" class="container-card">
+  <div class="card">
+    <div class="top"></div>
+    <div class="header">
+      <input name="name" placeholder="Nombre..." (change)="getName($event.target.value)">
+    </div>
+    <div class="food-img">
+      <input name="imagen" #name="ngModel" [(ngModel)]="foodService.selectedFood.imagen" placeholder="Imagen url...">
+    </div>
+    <div class="food-info">
+      <input name="kcal" #kcal="ngModel" [(ngModel)]="foodService.selectedFood.kcal" placeholder="Kcal...">
+      <input name="fat" #fat="ngModel" [(ngModel)]="foodService.selectedFood.fat" placeholder="Grasas...">
+      <input name="carbohydrates" #carbohydrates="ngModel" [(ngModel)]="foodService.selectedFood.carbohydrates" placeholder="Carbohidratos...">
+      <input name="proteins" #proteins="ngModel" [(ngModel)]="foodService.selectedFood.proteins" placeholder="Proteinas...">        
+    </div>
+  </div>
+  <button class="submit-button" type="submit" [disabled]="!foodForm.valid">Guardar</button>
+</form>
+<app-floating-icons></app-floating-icons>

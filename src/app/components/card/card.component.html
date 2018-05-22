@@ -9,6 +9,7 @@
     'dinner':foodListType === 'dinner'
   }">
     <div class="top">
+      <button class="button-edit" (click)="editFood(food.$key)">Editar</button>
       <button class="button-delete" (click)="deleteFood(food.$key)">X</button>
     </div>
     <div class="header">

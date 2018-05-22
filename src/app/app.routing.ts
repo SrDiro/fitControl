@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { FoodListComponent } from './components/food/food-list/food-list.component';
 import { FoodAddComponent } from './components/food/food-add/food-add.component';
+import { FoodEditComponent } from './components/food/food-edit/food-edit.component';
 import { DietListComponent } from './components/diet-list/diet-list.component';
 
 const appRoutes: Routes = [
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
     {path: 'food-list', component: FoodListComponent},
     {path: 'food-list/:food-type', component: FoodListComponent},
     {path: 'food-add', component: FoodAddComponent},
+    {path: 'food-edit', component: FoodEditComponent},
     {path: 'diet-list', component: DietListComponent},
 ]
 
