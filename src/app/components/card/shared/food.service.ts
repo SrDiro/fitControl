@@ -1,31 +1,25 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Component } from '@angular/core';
  
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database'
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { FoodListComponent } from '../../food/food-list/food-list.component';
 import { Food } from './food.model';
+
 
 @Injectable()
 export class FoodService {
   foodList: AngularFireList<any>;
   selectedFood: Food = new Food();
-  constructor(private firebase :AngularFireDatabase ) { }
+  constructor(private firebase :AngularFireDatabase) { }
  
   getData(foodType){
     this.foodList = this.firebase.list(foodType);
     return this.foodList;
   }
  
-  insertFood(food : Food)
+  insertFood(food : Food, typeFood: string, nameFood: string)
   {
-    this.foodList = this.firebase.list('Comida');
-    console.log(this.foodList);
-    this.foodList.push({
-      $key: food.$key,
-      imagen: food.$key.image,
-      kcal: food.$key.info.kcal,
-      fat: food.$key.info.fat,
-      carbohydrates: food.$key.info.carbohydrates,
-      proteins: food.$key.info.proteins,
-    });
+    console.log(food);
+    this.firebase.object(`${typeFood}/${nameFood}`).set(food);
   }
  
   // updateFood(employee : Food){
@@ -38,7 +32,7 @@ export class FoodService {
   //     });
   // }
  
-  // deleteFood($key : string){
-  //   this.foodList.remove($key);
-  // }
+  deleteFood($key : string){
+    this.foodList.remove($key);
+  }
 }

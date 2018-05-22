@@ -1,17 +1,24 @@
 <form #foodForm="ngForm" (ngSubmit)="onSubmit(foodForm)" class="container-card">
+  <select class="dropdown-menu" name="typeFood" (change)="filterFood($event.target.value)">
+    <option value="Desayuno">Desayuno</option>
+    <option value="Almuerzo">Almuerzo</option>
+    <option value="Comida">Comida</option>
+    <option value="Merienda">Merienda</option>
+    <option value="Cena">Cena</option>
+  </select>
   <div class="card">
     <div class="top"></div>
     <div class="header">
-      <input name="$key" #$key="ngModel" [(ngModel)]="foodService.selectedFood.$key" placeholder="Nombre...">
+      <input name="name" placeholder="Nombre..." (change)="getName($event.target.value)">
     </div>
     <div class="food-img">
-      <input name="image" #name="ngModel" [(ngModel)]="foodService.selectedFood.image" placeholder="Imagen url...">
+      <input name="imagen" #name="ngModel" [(ngModel)]="foodService.selectedFood.imagen" placeholder="Imagen url...">
     </div>
     <div class="food-info">
       <input name="kcal" #kcal="ngModel" [(ngModel)]="foodService.selectedFood.kcal" placeholder="Kcal...">
-      <input name="grasas" #fat="ngModel" [(ngModel)]="foodService.selectedFood.fat" placeholder="Grasas...">
-      <input name="carbohidratos" #carbohydrates="ngModel" [(ngModel)]="foodService.selectedFood.carbohydrates" placeholder="Carbohidratos...">
-      <input name="proteinas" #proteins="ngModel" [(ngModel)]="foodService.selectedFood.proteins" placeholder="Proteinas...">        
+      <input name="fat" #fat="ngModel" [(ngModel)]="foodService.selectedFood.fat" placeholder="Grasas...">
+      <input name="carbohydrates" #carbohydrates="ngModel" [(ngModel)]="foodService.selectedFood.carbohydrates" placeholder="Carbohidratos...">
+      <input name="proteins" #proteins="ngModel" [(ngModel)]="foodService.selectedFood.proteins" placeholder="Proteinas...">        
     </div>
   </div>
   <button class="submit-button" type="submit" [disabled]="!foodForm.valid">Guardar</button>

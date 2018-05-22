@@ -68,6 +68,25 @@ input{
     background-color: transparent;
 }
 
+.dropdown-menu{
+    background-color: #00c853;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    width: 248px;
+    height: 30px;
+    top: 26%;
+    color: black;
+    cursor: pointer;
+    border: solid 1px #95989A;
+
+    option{
+        color: white;
+        font-weight: bold;
+    }
+}
+
 .submit-button{
     background-color: #00c853;
     font-family: Roboto;

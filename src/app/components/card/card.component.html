@@ -8,7 +8,9 @@
     'afternoon-snack':foodListType === 'afternoon-snack',
     'dinner':foodListType === 'dinner'
   }">
-    <div class="top"></div>
+    <div class="top">
+      <button class="button-delete" (click)="deleteFood(food.$key)">X</button>
+    </div>
     <div class="header">
       <p class="food-name">{{food.$key}}</p>
     </div>
@@ -18,16 +20,16 @@
     <div class="food-info">
       <ul class="list-info">
         <li class="macronutrients"> 
-          <b>Kcal: </b>{{food.info.kcal}}
+          <b>Kcal: </b>{{food.kcal}}
         </li>
         <li class="macronutrients">
-          <b>Grasas: </b> {{food.info.fat}}
+          <b>Grasas: </b> {{food.fat}}
         </li>
         <li class="macronutrients">
-          <b>Carbohidratos: </b> {{food.info.carbohydrates}}
+          <b>Carbohidratos: </b> {{food.carbohydrates}}
         </li>
         <li class="macronutrients">
-          <b>Proteinas: </b> {{food.info.proteins}}
+          <b>Proteinas: </b> {{food.proteins}}
         </li>
       </ul>
     </div>

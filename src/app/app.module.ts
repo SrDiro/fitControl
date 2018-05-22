@@ -39,7 +39,8 @@ import { FoodAddComponent } from './components/food/food-add/food-add.component'
     FormsModule
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    FoodListComponent
   ],
   bootstrap: [AppComponent]
 })

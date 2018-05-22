@@ -16,7 +16,6 @@ import { Food } from './shared/food.model';
 
 export class CardComponent implements OnInit{
   public foodListType: string;
-  public tipoComida: string;
   foodItem: Food[];
 
   constructor( private activatedRoute: ActivatedRoute, private foodService : FoodService, private foodListComponent : FoodListComponent ) { 
@@ -26,14 +25,20 @@ export class CardComponent implements OnInit{
   ngOnInit() {
     var data = this.foodService.getData(this.foodListComponent.getTitle());
     data.snapshotChanges().subscribe(item => {
-      console.log(item);
       this.foodItem = [];
       item.forEach(element => {
         var y = element.payload.toJSON();
         y["$key"] = element.key;
         this.foodItem.push(y as Food);
+        console.log(this.foodItem);
       });
     });
+  }
+
+  deleteFood(keyFood: string){
+    if (confirm('Are you sure to delete this record ?') == true) {
+      this.foodService.deleteFood(keyFood);
+    }
   }
 
 }

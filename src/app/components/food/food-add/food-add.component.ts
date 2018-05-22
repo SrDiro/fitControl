@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms'
 
 import { FoodService } from '../../card/shared/food.service';
+import { FoodListComponent } from '../food-list/food-list.component';
 
 @Component({
   selector: 'app-food-add',
@@ -10,16 +11,23 @@ import { FoodService } from '../../card/shared/food.service';
   providers: [FoodService]
 })
 export class FoodAddComponent implements OnInit {
+  typeFood: string = 'Desayuno';
+  nameFood: string = null;
 
   constructor(private foodService: FoodService) { }
 
   ngOnInit() {
   }
 
-  onSubmit(foodForm: NgForm) {
-    if(foodForm.value.$key != null){
-      this.foodService.insertFood(foodForm.value);
-    }
+  filterFood(filterVal: string) {
+    this.typeFood = filterVal;
   }
 
+  getName(nameFood: string) {
+    this.nameFood = nameFood;
+  }
+
+  onSubmit(foodForm: NgForm) {
+    this.foodService.insertFood(foodForm.value, this.typeFood, this.nameFood);
+  }
 }
